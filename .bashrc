@@ -5,9 +5,6 @@ alias ..="cd ..";
 alias ll="ls -l";
 alias la="ls -la";
 alias cl="clear";
-alias reboot="systemctl reboot";
-alias poweroff="systemctl poweroff";
-alias suspend="systemctl suspend";
 alias gst="git status";
 
 # Environment variables;
