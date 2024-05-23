@@ -1,0 +1,12 @@
+
+[font]
+size = 9
+
+[font.normal]
+family = "Ubuntu Nerd Font Mono"
+
+[shell]
+program = "/bin/bash"
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.66"
