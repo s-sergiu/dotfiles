@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [[ $DISPLAY ]]
+then
+	get_id () {
+		xinput list | grep Synaptics | \
+		cut -f 2,2 -d '=' | awk '{print $1}'
+	}
+
+	id=get_id 
+
+	get_prop () {
+		xinput list-props $(eval $id) | grep "Tapping Enabled (" | \
+		awk '{print $4}' | sed 's/(//' | sed 's/)//' | \
+		sed 's/://';
+	}
+
+	get_prop_value () {
+		xinput list-props $(eval $id) | grep "Tapping Enabled (" | \
+			awk '{print $5}'
+	}
+
+	prop=get_prop
+	value=$(get_prop_value);
+
+	if [[ $value -eq 0 ]]
+	then
+		xinput set-prop $(eval $id) $(eval $prop) 1;
+	fi
+fi
