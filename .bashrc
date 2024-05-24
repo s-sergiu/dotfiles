@@ -1,27 +1,27 @@
 
 #functions
 parse_git_branch() {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[ \1]/'
 }
 
 parse_untracked() {
 	if [[ $(git status --short 2> /dev/null | grep ?? | wc -l) -gt 0 ]]
 		then
-			git status --short 2> /dev/null | grep ?? | wc -l | sed 's/$/)/' | sed 's/^/(/'
+			git status --short 2> /dev/null | grep ?? | wc -l | sed 's/$/]/' | sed 's/^/[ /'
 	fi 
 }
 
 parse_unstaged() {
 	if [[ $(git ls-files -m 2> /dev/null | wc -l) -gt 0 ]]
 		then
-			git ls-files -m 2> /dev/null | wc -l | sed 's/$/)/' | sed 's/^/(/'
+			git ls-files -m 2> /dev/null | wc -l | sed 's/$/]/' | sed 's/^/[ /'
 	fi 
 }
 
 parse_staged() {
 	if [[ $(git diff --name-only --cached 2> /dev/null | wc -l) -gt 0 ]]
 		then
-			git diff --name-only --cached 2> /dev/null | wc -l | sed 's/$/)/' | sed 's/^/(/'
+			git diff --name-only --cached 2> /dev/null | wc -l | sed 's/$/]/' | sed 's/^/[ /'
 	fi 
 }
 
