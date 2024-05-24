@@ -19,7 +19,7 @@ parse_unstaged() {
 }
 
 parse_staged() {
-	if [[ $(git status --short 2> /dev/null | grep M | wc -l) -gt 0 ]]
+	if [[ $(git diff --name-only --cached 2> /dev/null | wc -l) -gt 0 ]]
 		then
 			git diff --name-only --cached 2> /dev/null | wc -l | sed 's/$/)/' | sed 's/^/(/'
 	fi 
@@ -48,5 +48,6 @@ export PATH=$HOME/.local/bin:$HOME/.brew/bin/:$PATH
 export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 export DOCKER_BUILDKIT=1
 set -o vi
+
 set bell-style none
 export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\e[90m\$(parse_untracked)\e[91m\$(parse_unstaged)\e[32m\$(parse_staged)\[\e[00m\]$ "
