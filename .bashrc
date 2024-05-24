@@ -4,6 +4,13 @@ parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[ \1]/'
 }
 
+parse_changes() {
+	if [[ $(git status -uno 2> /dev/null | grep behind | awk '{print $7}') -gt 0 ]]
+		then
+			git status -uno 2> /dev/null | grep behind | awk '{print $7}' | sed 's/$/]/' | sed 's/^/[ /'
+	fi 
+}
+
 parse_untracked() {
 	if [[ $(git status --short 2> /dev/null | grep ?? | wc -l) -gt 0 ]]
 		then
@@ -50,4 +57,4 @@ export DOCKER_BUILDKIT=1
 set -o vi
 
 set bell-style none
-export PS1="\u@\h \[\e[32m\]\W \[\e[91m\]\$(parse_git_branch)\e[90m\$(parse_untracked)\e[91m\$(parse_unstaged)\e[32m\$(parse_staged)\[\e[00m\]$ "
+export PS1="\u@\h \[\e[32m\]\W \[\e[91m\]\$(parse_changes)\$(parse_git_branch)\e[90m\$(parse_untracked)\e[91m\$(parse_unstaged)\e[32m\$(parse_staged)\[\e[00m\]$ "
