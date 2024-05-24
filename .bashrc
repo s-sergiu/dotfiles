@@ -4,8 +4,17 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
+MAC_LS="ls -G -l"
+LINUX_LS="ls --color=auto -l"
+
 # Aliases;
-alias ls="ls --color=auto -l";
+if [[ $OSTYPE == darwin* ]]
+	then
+		alias ls=$MAC_LS
+	else
+		alias ls=$LINUX_LS
+fi
+
 alias ..="cd ..";
 alias la="ls -la";
 alias cl="clear";
