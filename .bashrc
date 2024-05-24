@@ -1,34 +1,60 @@
 
+
 #functions
 parse_git_branch() {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[ \1]/'
+			if [[ $OSTYPE == darwin* ]]
+				then
+					git branch 2> /dev/null | xargs | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
+				else
+					git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[ \1]/'
+			fi
 }
 
 parse_changes() {
 	if [[ $(git status -uno 2> /dev/null | grep behind | awk '{print $7}') -gt 0 ]]
 		then
-			git status -uno 2> /dev/null | grep behind | awk '{print $7}' | sed 's/$/]/' | sed 's/^/[ /'
+			if [[ $OSTYPE == darwin* ]]
+				then
+					git status -uno 2> /dev/null | grep behind | awk '{print $7}' | xargs | sed 's/$/]/' | sed 's/s/[/'
+				else
+					git status -uno 2> /dev/null | grep behind | awk '{print $7}' | sed 's/$/]/' | sed 's/^/[ /'
+			fi
 	fi 
 }
 
 parse_untracked() {
 	if [[ $(git status --short 2> /dev/null | grep ?? | wc -l) -gt 0 ]]
 		then
-			git status --short 2> /dev/null | grep ?? | wc -l | sed 's/$/]/' | sed 's/^/[ /'
+			if [[ $OSTYPE == darwin* ]]
+				then
+					git status --short 2> /dev/null | grep ?? | wc -l | xargs | sed 's/$/]/' | sed 's/^/[/'
+				else
+					git status --short 2> /dev/null | grep ?? | wc -l | sed 's/$/]/' | sed 's/^/[ /'
+			fi
 	fi 
 }
 
 parse_unstaged() {
 	if [[ $(git ls-files -m 2> /dev/null | wc -l) -gt 0 ]]
 		then
-			git ls-files -m 2> /dev/null | wc -l | sed 's/$/]/' | sed 's/^/[ /'
+			if [[ $OSTYPE == darwin* ]]
+				then
+					git ls-files -m 2> /dev/null | wc -l | xargs | sed 's/$/]/' | sed 's/^/[/'
+				else
+					git ls-files -m 2> /dev/null | wc -l | sed 's/$/]/' | sed 's/^/[ /'
+			fi
 	fi 
 }
 
 parse_staged() {
 	if [[ $(git diff --name-only --cached 2> /dev/null | wc -l) -gt 0 ]]
 		then
-			git diff --name-only --cached 2> /dev/null | wc -l | sed 's/$/]/' | sed 's/^/[ /'
+			if [[ $OSTYPE == darwin* ]]
+				then
+					git diff --name-only --cached 2> /dev/null | wc -l | xargs | sed 's/$/]/' | sed 's/^/[/'
+				else
+					git diff --name-only --cached 2> /dev/null | wc -l | sed 's/$/]/' | sed 's/^/[ /'
+			fi
 	fi 
 }
 
