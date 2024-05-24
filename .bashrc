@@ -19,6 +19,7 @@ alias ..="cd ..";
 alias la="ls -la";
 alias cl="clear";
 alias gst="git status";
+alias reboot="systemctl soft-reboot";
 
 # Environment variables;
 export GPG_TTY=$(tty)
