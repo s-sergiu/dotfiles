@@ -5,7 +5,6 @@ set hlsearch
 syntax on
 set belloff=all
 set autoindent
-set termguicolors
 
 "norm stuff
 set tabstop=4
