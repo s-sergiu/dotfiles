@@ -6,7 +6,7 @@ parse_git_branch() {
 				then
 					git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 				else
-					git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[ \1]/'
+					git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 			fi
 }
 
@@ -17,7 +17,7 @@ parse_changes() {
 				then
 					git status -uno 2> /dev/null | grep behind | awk '{print $7}' | xargs | sed 's/$/]/' | sed 's/s/[/'
 				else
-					git status -uno 2> /dev/null | grep behind | awk '{print $7}' | sed 's/$/]/' | sed 's/^/[ /'
+					git status -uno 2> /dev/null | grep behind | awk '{print $7}' | sed 's/$/]/' | sed 's/^/[/'
 			fi
 	fi 
 }
@@ -29,7 +29,7 @@ parse_untracked() {
 				then
 					git status --short 2> /dev/null | grep ?? | wc -l | xargs | sed 's/$/]/' | sed 's/^/[/'
 				else
-					git status --short 2> /dev/null | grep ?? | wc -l | sed 's/$/]/' | sed 's/^/[ /'
+					git status --short 2> /dev/null | grep ?? | wc -l | sed 's/$/]/' | sed 's/^/[/'
 			fi
 	fi 
 }
@@ -41,7 +41,7 @@ parse_unstaged() {
 				then
 					git ls-files -m 2> /dev/null | wc -l | xargs | sed 's/$/]/' | sed 's/^/[/'
 				else
-					git ls-files -m 2> /dev/null | wc -l | sed 's/$/]/' | sed 's/^/[ /'
+					git ls-files -m 2> /dev/null | wc -l | sed 's/$/]/' | sed 's/^/[/'
 			fi
 	fi 
 }
@@ -53,7 +53,7 @@ parse_staged() {
 				then
 					git diff --name-only --cached 2> /dev/null | wc -l | xargs | sed 's/$/]/' | sed 's/^/[/'
 				else
-					git diff --name-only --cached 2> /dev/null | wc -l | sed 's/$/]/' | sed 's/^/[ /'
+					git diff --name-only --cached 2> /dev/null | wc -l | sed 's/$/]/' | sed 's/^/[/'
 			fi
 	fi 
 }
