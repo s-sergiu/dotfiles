@@ -1,9 +1,8 @@
-
 [font]
 size = 9
 
 [font.normal]
-family = "Ubuntu Nerd Font Mono"
+family = "Fira Code"
 
 [shell]
 program = "/bin/bash"
