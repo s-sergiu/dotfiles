@@ -77,7 +77,7 @@ alias reboot="systemctl soft-reboot";
 
 # Environment variables;
 export GPG_TTY=$(tty)
-export PATH=$HOME/.local/bin:$HOME/goinfre/.brew/bin/:$PATH
+export PATH=$HOME/.local/bin:$HOME/.brew/bin/:$PATH
 export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 export DOCKER_BUILDKIT=1
 set -o vi
