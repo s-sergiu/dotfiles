@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ln -sf $PWD/.vimrc $HOME/.vimrc
+ln -sf $PWD/.bashrc $HOME/.bashrc
+ln -sf $PWD/.gitconfig $HOME/.gitconfig
+mkdir -p $HOME/.config/alacritty
+ln -sf $PWD/.config/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
