@@ -74,6 +74,7 @@ alias la="ls -la";
 alias cl="clear";
 alias gst="git status";
 alias reboot="systemctl soft-reboot";
+alias tmux="export TERM=linux-16color; tmux"
 
 # Environment variables;
 export GPG_TTY=$(tty)
