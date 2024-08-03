@@ -1,11 +1,11 @@
 #!/bin/bash
 
-ln -sf $PWD/.vimrc $HOME/.vimrc
-ln -sf $PWD/.bashrc $HOME/.bashrc
-ln -sf $PWD/.gitconfig $HOME/.gitconfig
+ln -sf $HOME/dotfiles/.vimrc $HOME/.vimrc
+ln -sf $HOME/dotfiles/.bashrc $HOME/.bashrc
+ln -sf $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 mkdir -p $HOME/.config/alacritty
 mkdir -p $HOME/.local/bin
-ln -sf $PWD/.config/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
-ln -sf $PWD/scripts/showBattery $HOME/.local/bin/showbattery
-ln -sf $PWD/scripts/xinputInit $HOME/.local/bin/xinputinit
-ln -sf $PWD/scripts/xrandrInit $HOME/.local/bin/xrandrinit
+ln -sf $HOME/dotfiles/.config/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
+ln -sf $HOME/dotfiles/scripts/showBattery $HOME/.local/bin/showbattery
+ln -sf $HOME/dotfiles/scripts/xinputInit $HOME/.local/bin/xinputinit
+ln -sf $HOME/dotfiles/scripts/xrandrInit $HOME/.local/bin/xrandrinit
