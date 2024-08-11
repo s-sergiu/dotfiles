@@ -10,7 +10,6 @@ set autoindent
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set colorcolumn=80
 
 "laststatus
 set laststatus=2
@@ -49,7 +48,8 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-
 set backspace=2
 
 "theme
-colorscheme delek
+colorscheme gruvbox
+set background=dark
 hi CursorLine guifg=NONE
 hi CursorLine guibg=NONE
 
