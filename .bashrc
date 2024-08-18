@@ -70,10 +70,11 @@ if [[ $OSTYPE == darwin* ]]
 fi
 
 alias ..="cd ..";
-alias la="ls -la";
+alias la="ls -lah";
 alias cl="clear";
 alias gst="git status";
 alias reboot="systemctl soft-reboot";
+alias poweroff="systemctl poweroff";
 alias tmux="export TERM=linux-16color; tmux"
 
 # Environment variables;
