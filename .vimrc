@@ -70,3 +70,5 @@ hi Comment guifg=red
 if has("autocmd")
   filetype plugin indent on
 endif
+
+autocmd BufNewFile,BufRead *.tpp setf c
