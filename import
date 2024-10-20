@@ -12,6 +12,8 @@ ln -f $HOME/dotfiles/.config/alacritty/alacritty.toml $HOME/.config/alacritty/al
 ln -f $HOME/dotfiles/scripts/showBattery $HOME/.local/bin/showbattery
 ln -f $HOME/dotfiles/scripts/xinputInit $HOME/.local/bin/xinputinit
 ln -f $HOME/dotfiles/scripts/xrandrInit $HOME/.local/bin/xrandrinit
+ln -f $HOME/dotfiles/scripts/brew-install $HOME/.local/bin/brew-install
+ln -f $HOME/dotfiles/scripts/init_docker $HOME/.local/bin/init_docker
 ln -f $HOME/dotfiles/.vim/plugin/stdheader.vim $HOME/.vim/plugin/stdheader.vim
 ln -f $HOME/dotfiles/.vim/syntax/c.vim $HOME/.vim/syntax/c.vim
 ln -f $HOME/dotfiles/.vim/colors/gruvbox.vim $HOME/.vim/colors/gruvbox.vim
