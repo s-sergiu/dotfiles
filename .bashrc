@@ -2,12 +2,7 @@
 
 #functions
 parse_git_branch() {
-			if [[ $OSTYPE == darwin* ]]
-				then
-					git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
-				else
-					git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
-			fi
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 }
 
 parse_changes() {
