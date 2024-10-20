@@ -86,3 +86,4 @@ set -o vi
 
 set bell-style none
 export PS1="\u@\h \[\e[32m\]\W \[\e[91m\]\$(parse_changes)\$(parse_git_branch)\e[90m\$(parse_untracked)\e[91m\$(parse_unstaged)\e[32m\$(parse_staged)\[\e[00m\]$ "
+export PATH=$HOME/.brew/bin:$PATH
