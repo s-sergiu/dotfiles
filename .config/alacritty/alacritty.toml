@@ -4,7 +4,7 @@ size = 8
 [font.normal]
 family = "Fira Code"
 
-[shell]
+[terminal.shell]
 program = "/bin/bash"
 
 [env]
@@ -45,3 +45,5 @@ blue    = '#83a598'
 magenta = '#d3869b'
 cyan    = '#8ec07c'
 white   = '#ebdbb2'
+
+[terminal]
