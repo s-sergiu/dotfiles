@@ -65,7 +65,6 @@ if [[ $OSTYPE == darwin* ]]
 fi
 
 alias ..="cd ..";
-alias la="ls -lah";
 alias cl="clear";
 alias gst="git status";
 alias reboot="systemctl soft-reboot";
