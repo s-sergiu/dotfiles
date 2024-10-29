@@ -53,8 +53,8 @@ parse_staged() {
 	fi 
 }
 
-MAC_LS="ls -G -l"
-LINUX_LS="ls --color=auto -l"
+MAC_LS="ls -G"
+LINUX_LS="ls --color=auto"
 
 # Aliases;
 if [[ $OSTYPE == darwin* ]]
