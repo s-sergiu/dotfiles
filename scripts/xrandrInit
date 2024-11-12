@@ -14,6 +14,6 @@ then
 
 	if [[ $(get_display_2) ]]
 	then
-		xrandr --output $(eval $value_2) --above $(eval $value_1) --auto
+		xrandr --output $(eval $value_2) --left-of $(eval $value_1) --auto
 	fi
 fi
