@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 ln -f $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -f $HOME/dotfiles/.bashrc $HOME/.bashrc
 ln -f $HOME/dotfiles/.gitconfig $HOME/.gitconfig
