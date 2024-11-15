@@ -3,6 +3,6 @@
 [user]
 	email = ssergiu@student.42heilbronn.de
 	name = Sergiu Ster
-	signingkey = F608E37EF18BEB44
+	signingkey = 08B7919D5A16C54A
 [core]
 	editor = vim
