@@ -48,7 +48,7 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-
 set backspace=2
 
 "theme
-colorscheme gruvbox
+colorscheme default
 set background=dark
 hi CursorLine guifg=NONE
 hi CursorLine guibg=NONE
