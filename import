@@ -4,12 +4,12 @@
 ln -f $HOME/dotfiles/.vimrc $HOME/.vimrc
 ln -f $HOME/dotfiles/.bashrc $HOME/.bashrc
 ln -f $HOME/dotfiles/.gitconfig $HOME/.gitconfig
-#mkdir -p $HOME/.config/alacritty
+mkdir -p $HOME/.config/alacritty
 mkdir -p $HOME/.local/bin
 mkdir -p $HOME/.vim/plugin
 mkdir -p $HOME/.vim/syntax
 mkdir -p $HOME/.vim/colors
-#ln -f $HOME/dotfiles/.config/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
+ln -f $HOME/dotfiles/.config/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 ln -f $HOME/dotfiles/scripts/showBattery $HOME/.local/bin/showbattery
 ln -f $HOME/dotfiles/scripts/xinputInit $HOME/.local/bin/xinputinit
 ln -f $HOME/dotfiles/scripts/xrandrInit $HOME/.local/bin/xrandrinit
