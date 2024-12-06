@@ -1,0 +1,7 @@
+[Unit]
+Description="Redshift autostart service"
+[Service]
+Environment=DISPLAY=:0
+ExecStart=redshift
+[Install]
+WantedBy=default.target
