@@ -48,8 +48,6 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-
 set backspace=2
 
 "theme
-colorscheme default
-set background=dark
 hi CursorLine guifg=NONE
 hi CursorLine guibg=NONE
 
@@ -72,3 +70,6 @@ if has("autocmd")
 endif
 
 autocmd BufNewFile,BufRead *.tpp setf c
+
+colorscheme gruvbox
+set background=dark
