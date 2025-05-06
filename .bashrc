@@ -18,13 +18,13 @@ parse_changes() {
 }
 
 parse_untracked() {
-	if [[ $(git status --short 2> /dev/null | grep ?? | wc -l) -gt 0 ]]
+	if [[ $(git status --short 2> /dev/null | grep ?? 2> /dev/null | wc -l) -gt 0 ]]
 		then
 			if [[ $OSTYPE == darwin* ]]
 				then
-					git status --short 2> /dev/null | grep ?? | wc -l | xargs | sed 's/$/]/' | sed 's/^/[/'
+					git status --short 2> /dev/null | grep ?? 2> /dev/null | wc -l | xargs | sed 's/$/]/' | sed 's/^/[/'
 				else
-					git status --short 2> /dev/null | grep ?? | wc -l | sed 's/$/]/' | sed 's/^/[/'
+					git status --short 2> /dev/null | grep ?? 2> /dev/null | wc -l | sed 's/$/]/' | sed 's/^/[/'
 			fi
 	fi 
 }
