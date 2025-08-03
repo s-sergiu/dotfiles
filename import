@@ -6,15 +6,15 @@ ln -f $PWD/.bashrc $HOME/.bashrc
 ln -f $PWD/.gitconfig $HOME/.gitconfig
 #mkdir -p $HOME/.config/alacritty
 mkdir -p $HOME/.local/bin
-mkdir -p $HOME/.vim/plugin
+#mkdir -p $HOME/.vim/plugin
 mkdir -p $HOME/.vim/syntax
-mkdir -p $HOME/.vim/colors
+#mkdir -p $HOME/.vim/colors
 #ln -f $HOME/dotfiles/.config/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 #ln -f $HOME/dotfiles/scripts/showBattery $HOME/.local/bin/showbattery
 #ln -f $HOME/dotfiles/scripts/xinputInit $HOME/.local/bin/xinputinit
 #ln -f $HOME/dotfiles/scripts/xrandrInit $HOME/.local/bin/xrandrinit
 #ln -f $HOME/dotfiles/scripts/brew-install $HOME/.local/bin/brew-install
 #ln -f $HOME/dotfiles/scripts/init_docker $HOME/.local/bin/init_docker
-ln -f $PWD/.vim/plugin/stdheader.vim $HOME/.vim/plugin/stdheader.vim
+#ln -f $PWD/.vim/plugin/stdheader.vim $HOME/.vim/plugin/stdheader.vim
 ln -f $PWD/.vim/syntax/c.vim $HOME/.vim/syntax/c.vim
-ln -f $PWD/.vim/colors/gruvbox.vim $HOME/.vim/colors/gruvbox.vim
+#ln -f $PWD/.vim/colors/gruvbox.vim $HOME/.vim/colors/gruvbox.vim
